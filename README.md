@@ -1,7 +1,9 @@
 # -_Sistema_Java_Oracle_19c_4-Tablas_con_Swing_- :.
 🖥️ Sistema Java + Oracle 19c (4 Tablas con Swing):
 
-<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/5d425a7a-dc5a-42d4-a643-0dad95a689d4" />  
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/5d425a7a-dc5a-42d4-a643-0dad95a689d4" />    
+
+<img width="2554" height="1079" alt="image" src="https://github.com/user-attachments/assets/52de172a-6eb9-4491-8f26-40c7109589eb" />    
 
 ```
 Solucion completa, estructurada y lista para IntelliJ + Oracle 19c, con:
