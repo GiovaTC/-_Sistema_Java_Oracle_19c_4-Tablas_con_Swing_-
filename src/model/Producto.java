@@ -1,18 +1,18 @@
 package model;
 
-public class EmpresaVenta {
+public class Producto {
 
     private int id;
     private String nombre;
-    private String ciudad;
+    private double precio;
 
-    public EmpresaVenta(int id, String nombre, String ciudad) {
+    public Producto(int id, String nombre, double precio) {
         this.id = id;
         this.nombre = nombre;
-        this.ciudad = ciudad;
+        this.precio = precio;
     }
 
     public int getId() { return id; }
     public String getNombre() { return nombre; }
-    public String getCiudad() { return ciudad; }
-}
+    public double getPrecio() { return precio; }
+}   
