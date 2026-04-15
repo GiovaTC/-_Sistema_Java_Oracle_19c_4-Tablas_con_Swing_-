@@ -15,4 +15,4 @@ public class Producto {
     public int getId() { return id; }
     public String getNombre() { return nombre; }
     public double getPrecio() { return precio; }
-}   
+}
