@@ -1,7 +1,7 @@
 package dao;
 
 import database.Conexion;
-import model.Cliente;
+import model.InfoCliente;
 import model.Producto;
 
 import java.sql.Connection;
@@ -10,20 +10,21 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductoDAO {
+public class InfoClienteDAO {
 
-    public List<Producto> listar() {
-        List<Producto> lista = new ArrayList<>();
+    public List<InfoCliente> listar() {
+        List<InfoCliente> lista = new ArrayList<>();
 
         try (Connection conn = Conexion.getConnection();
              Statement st = conn.createStatement();
-             ResultSet rs = st.executeQuery("SELECT * FROM PRODUCTO_D")) {
+             ResultSet rs = st.executeQuery("SELECT * FROM INFO_CLIENTE")) {
 
             while (rs.next()) {
-                lista.add(new Producto(
+                lista.add(new InfoCliente(
                         rs.getInt("ID"),
-                        rs.getString("NOMBRE"),
-                        rs.getDouble("PRECIO")
+                        rs.getInt("CLIENTE_ID"),
+                        rs.getString("DIRECCION"),
+                        rs.getString("TELEFONO")
                 ));
             }
 
