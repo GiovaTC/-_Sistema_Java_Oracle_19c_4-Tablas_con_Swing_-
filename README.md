@@ -5,6 +5,8 @@
 
 <img width="2554" height="1079" alt="image" src="https://github.com/user-attachments/assets/52de172a-6eb9-4491-8f26-40c7109589eb" />    
 
+<img width="2554" height="1079" alt="image" src="https://github.com/user-attachments/assets/e1a13bf2-6ceb-4dbe-aa46-da6ea8b9b024" />    
+
 ```
 Solucion completa, estructurada y lista para IntelliJ + Oracle 19c, con:
 
