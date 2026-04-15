@@ -12,4 +12,4 @@ public class EmpresaVentaService {
     public List<EmpresaVenta> obtenerEmpresaVentas() {
         return dao.listar();
     }
-}   
+}
