@@ -28,3 +28,21 @@ CREATE TABLE EMPRESA_VENTA (
 );
 
 COMMIT;
+
+--? Inserción de Datos (36 registros por tabla)
+BEGIN
+    FOR i IN 1..36 LOOP
+        INSERT INTO CLIENTE_Q VALUES (i, 'Cliente ' || i, 'cliente' || i || '@mail.com');
+        INSERT INTO PRODUCTO_D VALUES (i, 'Producto ' || i, i * 1000);
+        INSERT INTO INFO_CLIENTE VALUES (i, i, 'Direccion ' || i, '30000000' || i);
+        INSERT INTO EMPRESA_VENTA VALUES (i, 'Empresa ' || i, 'Ciudad ' || i);
+    END LOOP;
+END;
+/
+
+COMMIT;
+
+SELECT * FROM CLIENTE_Q c
+INNER JOIN INFO_CLIENTE ic ON c.ID = ic.CLIENTE_ID
+INNER JOIN PRODUCTO_D p ON c.ID = p.ID
+INNER JOIN EMPRESA_VENTA e ON c.ID = e.ID;
