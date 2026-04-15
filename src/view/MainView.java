@@ -1,8 +1,12 @@
 package view;
 
 import model.Cliente;
+import model.EmpresaVenta;
+import model.InfoCliente;
 import model.Producto;
 import service.ClienteService;
+import service.EmpresaVentaService;
+import service.InfoClienteService;
 import service.ProductoService;
 
 import javax.swing.*;
@@ -83,10 +87,46 @@ public class MainView extends JFrame {
 
     private void cargarInfoCliente() {
         // Implementar igual que clientes
+        InfoClienteService service = new InfoClienteService();
+        List<InfoCliente> lista = service.obtenerInfoClientes();
+
+        DefaultTableModel model = new DefaultTableModel();
+        model.addColumn("ID");
+        model.addColumn("CLIENTE_ID");
+        model.addColumn("DIRECCION");
+        model.addColumn("TELEFONO");
+
+        for (InfoCliente c : lista) {
+            model.addRow(new Object[]{
+                    c.getId(),
+                    c.getClienteId(),
+                    c.getDireccion(),
+                    c.getTelefono()
+            });
+        }
+
+        tablaInfoCliente.setModel(model);
     }
 
     private void cargarEmpresa() {
         // Implementar igual que clientes
+        EmpresaVentaService service = new EmpresaVentaService();
+        List<EmpresaVenta> lista = service.obtenerEmpresaVentas();
+
+        DefaultTableModel model = new DefaultTableModel();
+        model.addColumn("ID");
+        model.addColumn("NOMBRE");
+        model.addColumn("CIUDAD");
+
+        for (EmpresaVenta c : lista) {
+            model.addRow(new Object[]{
+                    c.getId(),
+                    c.getNombre(),
+                    c.getCiudad()
+            });
+
+            tablaEmpresa.setModel(model);
+        }
     }
 
     public static void main(String[] args) {
