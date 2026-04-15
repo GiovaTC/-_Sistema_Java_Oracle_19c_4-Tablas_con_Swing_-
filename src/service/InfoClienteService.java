@@ -12,4 +12,4 @@ public class InfoClienteService {
     public List<InfoCliente> obtenerInfoClientes() {
         return dao.listar();
     }
-}   
+}
