@@ -18,4 +18,4 @@ public class InfoCliente {
     public int getClienteId() { return clienteId; }
     public String getDireccion() { return direccion; }
     public String getTelefono() { return telefono; }
-}      
+}
