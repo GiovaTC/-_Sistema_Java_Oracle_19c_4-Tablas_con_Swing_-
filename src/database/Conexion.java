@@ -1,4 +1,20 @@
 package database;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+
 public class Conexion {
-}
+
+    private static final String URL = "jdbc:oracle:thin:@//localhost:1521/orcl";
+    private static final String USER = "system";
+    private static final String PASS = "Tapiero123";
+
+    public static Connection getConnection() {
+        try {
+            return DriverManager.getConnection(URL, USER, PASS);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+}   
