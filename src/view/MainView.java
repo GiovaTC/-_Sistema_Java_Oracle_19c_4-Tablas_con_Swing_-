@@ -1,7 +1,9 @@
 package view;
 
 import model.Cliente;
+import model.Producto;
 import service.ClienteService;
+import service.ProductoService;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -60,6 +62,23 @@ public class MainView extends JFrame {
 
     private void cargarProductos() {
         // Implementar igual que clientes
+        ProductoService service = new ProductoService();
+        List<Producto> lista = service.obtenerProductos();
+
+        DefaultTableModel model = new DefaultTableModel();
+        model.addColumn("ID");
+        model.addColumn("Nombre");
+        model.addColumn("Precio");
+
+        for (Producto c : lista) {
+            model.addRow(new Object[]{
+                    c.getId(),
+                    c.getNombre(),
+                    c.getPrecio()
+            });
+        }
+
+        tablaProducto.setModel(model);
     }
 
     private void cargarInfoCliente() {
